@@ -1,0 +1,11 @@
+# Ignorar las carpetas __pycache__
+__pycache__/
+*.py[cod]
+
+# Ignorar dependencias
+venv/
+.env
+.rasa/
+
+# Configuration files
+credentials.yml

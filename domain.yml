@@ -1,0 +1,18 @@
+version: "3.1"
+
+intents: []
+
+slots:
+  detected_intent:
+    type: text
+    influence_conversation: false
+    mappings: 
+    - type: custom
+
+actions:
+  - action_detect_intent_gpt
+  - action_handle_message
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

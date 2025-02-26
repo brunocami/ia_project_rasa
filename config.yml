@@ -1,0 +1,17 @@
+version: "3.1"
+language: en
+
+pipeline:
+- name: WhitespaceTokenizer
+- name: CountVectorsFeaturizer
+- name: DIETClassifier
+- name: EntitySynonymMapper
+- name: FallbackClassifier
+  threshold: 0.3    # Si la intención tiene confianza menor a 0.3, activa el fallback
+
+policies:
+- name: RulePolicy
+  core_fallback_action_name: "action_detect_intent_gpt"    # 🔥 Redirigir fallback a ChatGPT
+  enable_fallback_prediction: true
+- name: UnexpecTEDIntentPolicy
+assistant_id: 20250207-200314-central-frequency

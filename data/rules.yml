@@ -1,0 +1,5 @@
+version: "3.1"
+rules:
+- rule: Manejar mensaje del usuario con OpenAI
+  steps:
+  - action: action_detect_intent_gpt
