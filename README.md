@@ -28,6 +28,8 @@
     GEMINI_API_KEY=AIzaSyB7iG1qAtV5_8TY2oBJCNlIoPDVQ-OBLvg
 
 7. Levantar modelo de rasa:
+    - Descargar todas las dependencias usando python 3.10 para no tener problema: py -3.10 -m venv venv
+    
     - **Start model** rasa run --enable-api --cors "*" --debug
 
 8. Levantar servidor de actions
